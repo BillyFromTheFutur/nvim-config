@@ -18,7 +18,7 @@ mason.setup({
 })
 
 lspconfig.setup {
-  --ensure_installed = { 'tailwindcss', 'astro', 'tsserver' },
+  --ensure_installed = { 'tailwindcss', 'astro', 'tsserver', 'flow-language-server' },
   automatic_installation = true
 }
 --require 'lspconfig'.tailwindcss.setup {}

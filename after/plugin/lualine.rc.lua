@@ -1,4 +1,5 @@
 local status, lualine = pcall(require, "lualine")
+local gps = require("nvim-gps")
 if (not status) then return end
 local colors = {
   blue   = '#80a0ff',

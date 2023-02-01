@@ -67,7 +67,37 @@ protocol.CompletionItemKind = {
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+nvim_lsp.rust_analyzer.setup({
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
+  capabilities = capabilities,
+  settings = {
+    ["rust-analyzer"] = {
+      assist = {
+        importGranularity = "module",
+        importPrefix = "self",
+      },
+      cargo = {
+        loadOutDirsFromCheck = true
+      },
+      procMacro = {
+        enable = true
+      },
+    }
+  }
+})
 nvim_lsp.flow.setup {
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
+  cmd = { 'flow-language-server.cmd', '--stdio' },
+  capabilities = capabilities
+}
+
+nvim_lsp.java_language_server.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
     enable_format_on_save(client, bufnr)
@@ -80,7 +110,7 @@ nvim_lsp.tsserver.setup {
     on_attach(client, bufnr)
     enable_format_on_save(client, bufnr)
   end,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.tsx" },
   cmd = { "typescript-language-server.cmd", "--stdio" },
   capabilities = capabilities
 }

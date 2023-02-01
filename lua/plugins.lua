@@ -37,7 +37,16 @@ packer.startup(function(use)
   use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'pocco81/auto-save.nvim'
+  use({
+    "Pocco81/auto-save.nvim",
+    config = function()
+      require("auto-save").setup {
+        -- your config goes here
+        -- or just leave it empty :)
+        debounce_delay = 1200
+      }
+    end,
+  })
   use 'akinsho/nvim-bufferline.lua'
   use 'norcalli/nvim-colorizer.lua'
   use 'lewis6991/gitsigns.nvim'
@@ -49,10 +58,35 @@ packer.startup(function(use)
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
-  use 'mfussenegger/nvim-dap'
+  use {
+    "mfussenegger/nvim-dap",
+  }
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use 'kdheepak/lazygit.nvim'
+  use 'tpope/vim-fugitive'
+  use 'rbong/vim-flog'
+  use 'mfussenegger/nvim-jdtls'
+  --use { "zbirenbaum/copilot.lua" }
+  use({
+    "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup({
+        -- optional configuration
+      })
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+  })
+  use 'MunifTanjim/nui.nvim'
+  use {
+    "SmiteshP/nvim-gps",
+    requires = "nvim-treesitter/nvim-treesitter"
+  }
 end)
-
+-- openai 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
 -- use 'hrsh7th/cmp-buffer'
 -- use {
 -- 'hrsh7th/cmp-nvim-lsp',
@@ -85,3 +119,38 @@ end)
 -- requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 -- after = "nvim-lspconfig"
 -- })
+-- })
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--    config = function()
+--      require("plugins.dap")
+--    end,
+--    keys = {
+--      "<Leader>da",
+--      "<Leader>db",
+--      "<Leader>dc",
+--      "<Leader>dd",
+--      "<Leader>dh",
+--      "<Leader>di",
+--      "<Leader>do",
+--      "<Leader>dO",
+--      "<Leader>dt",
+--  },
+--dependencies = {
+--"theHamsta/nvim-dap-virtual-text",
+--"rcarriga/nvim-dap-ui",
+--},
+--  use {
+-- "zbirenbaum/copilot.lua",
+-- cmd = "Copilot",
+-- event = "InsertEnter",
+--}
