@@ -85,6 +85,12 @@ packer.startup(function(use)
     "SmiteshP/nvim-gps",
     requires = "nvim-treesitter/nvim-treesitter"
   }
+  use {
+    'samodostal/image.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+  }
 end)
 -- openai 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
 -- use 'hrsh7th/cmp-buffer'
@@ -148,6 +154,12 @@ end)
 --dependencies = {
 --"theHamsta/nvim-dap-virtual-text",
 --"rcarriga/nvim-dap-ui",
+--},
+--  use {
+-- "zbirenbaum/copilot.lua",
+-- cmd = "Copilot",
+-- event = "InsertEnter",
+--}
 --},
 --  use {
 -- "zbirenbaum/copilot.lua",

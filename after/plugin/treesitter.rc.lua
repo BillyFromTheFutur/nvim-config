@@ -1,7 +1,7 @@
 local status, ts, M = pcall(require, 'nvim-treesitter.configs')
 if (not status) then return end
 require 'nvim-treesitter.install'.prefer_git = false
-require 'nvim-treesitter.install'.compilers = { "gcc", "cc" }
+require 'nvim-treesitter.install'.compilers = { "zig", "gcc", "cc" }
 
 
 ts.setup {
@@ -18,7 +18,7 @@ ts.setup {
     "tsx",
     "toml",
     "fish",
-    "php",
+    --    "php",
     "json",
     "yaml",
     "css",

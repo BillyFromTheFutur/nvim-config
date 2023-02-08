@@ -96,7 +96,14 @@ nvim_lsp.flow.setup {
   cmd = { 'flow-language-server.cmd', '--stdio' },
   capabilities = capabilities
 }
-
+nvim_lsp.prismals.setup {
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
+  cmd = { 'flow-language-server.cmd', '--stdio' },
+  capabilities = capabilities
+}
 nvim_lsp.java_language_server.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)

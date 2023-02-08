@@ -6,7 +6,9 @@ prettier.setup {
   filetypes = {
     'css',
     'javascript',
+    'typescript',
     'javascriptreact',
+    'typescriptreact',
     'json',
     'scss',
     'less'

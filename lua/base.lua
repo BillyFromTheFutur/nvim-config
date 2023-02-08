@@ -25,15 +25,14 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.ai = true
 vim.opt.si = true
-vim.opt.wrap = false 
+vim.opt.wrap = false
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' }
 vim.opt.wildignore:append { '*/node_modules/*' }
 
 
-
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
+vim.cmd([[let &t_Cs = "\e[4:3m "]])
+vim.cmd([[let &t_Ce = "\e[4:0m "]])
 
 vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = '*',

@@ -9,6 +9,9 @@ end
 
 local fb_actions = require "telescope".extensions.file_browser.actions
 
+--local vim = require("vim")
+
+
 telescope.setup {
   defaults = {
     mappings = {
@@ -22,6 +25,8 @@ telescope.setup {
       theme = "dropdown",
       -- disables netrw and use telescope-file-browser in its place
       hijack_netrw = false,
+      file_icon_space = "  ",
+
       mappings = {
         -- your custom insert mode mappings
         ["i"] = {
@@ -31,6 +36,9 @@ telescope.setup {
           -- your custom normal mode mappings
           ["N"] = fb_actions.create,
           ["h"] = fb_actions.goto_parent_dir,
+          ["sd"] = fb_actions.sort_by_date,
+          ["m"] = fb_actions.move,
+          ["l"] = fb_actions.open,
           --         ["l"] = fb_actions.select_default,
           ["a"] = fb_actions.toggle_hidden,
           --         ["l"] = fb_actions.goto_,
