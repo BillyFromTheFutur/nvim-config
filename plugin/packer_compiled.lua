@@ -75,7 +75,7 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["ChatGPT.nvim"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\fchatgpt\frequire\0" },
+    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ChatGPT.nvim",
     url = "https://github.com/jackMort/ChatGPT.nvim"
@@ -84,11 +84,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
-  },
-  ["auto-save.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-save.nvim",
-    url = "https://github.com/pocco81/auto-save.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -105,14 +100,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
-  ["copilot.lua"] = {
-    commands = { "Copilot" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\copilot.lua",
-    url = "https://github.com/zbirenbaum/copilot.lua"
-  },
   ["flutter-tools.nvim"] = {
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\flutter-tools.nvim",
@@ -127,6 +114,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["image.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\image.nvim",
+    url = "https://github.com/samodostal/image.nvim"
   },
   ["lazygit.nvim"] = {
     loaded = true,
@@ -218,6 +210,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
   },
+  ["nvim-gps"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-gps",
+    url = "https://github.com/SmiteshP/nvim-gps"
+  },
   ["nvim-jdtls"] = {
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-jdtls",
@@ -252,6 +249,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\presence.nvim",
+    url = "https://github.com/andweeb/presence.nvim"
   },
   ["prettier.nvim"] = {
     loaded = true,
@@ -288,27 +290,8 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: ChatGPT.nvim
 time([[Config for ChatGPT.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\fchatgpt\frequire\0", "config", "ChatGPT.nvim")
+try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "ChatGPT.nvim")
 time([[Config for ChatGPT.nvim]], false)
-
--- Command lazy-loads
-time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'Copilot', function(cmdargs)
-          require('packer.load')({'copilot.lua'}, { cmd = 'Copilot', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'copilot.lua'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Copilot ', 'cmdline')
-      end})
-time([[Defining lazy-load commands]], false)
-
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Event lazy-loads
-time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'copilot.lua'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-time([[Defining lazy-load event autocommands]], false)
-vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

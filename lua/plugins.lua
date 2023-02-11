@@ -9,11 +9,12 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   -- use { 'nvim-telescope/telescope-fzf-native.nvim',
   use { 'wbthomason/packer.nvim',
-    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+      run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
   use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
+      'svrana/neosolarized.nvim',
+      requires = { 'tjdevries/colorbuddy.nvim' }
   }
+  use 'andweeb/presence.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'glepnir/lspsaga.nvim'
   use 'L3MON4D3/LuaSnip'
@@ -24,8 +25,8 @@ packer.startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'neovim/nvim-lspconfig'
   use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
   }
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
@@ -37,16 +38,6 @@ packer.startup(function(use)
   use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
-  use({
-    "Pocco81/auto-save.nvim",
-    config = function()
-      require("auto-save").setup {
-        -- your config goes here
-        -- or just leave it empty :)
-        debounce_delay = 1200
-      }
-    end,
-  })
   use 'akinsho/nvim-bufferline.lua'
   use 'norcalli/nvim-colorizer.lua'
   use 'lewis6991/gitsigns.nvim'
@@ -55,11 +46,11 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use 'folke/zen-mode.nvim'
   use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
   })
   use {
-    "mfussenegger/nvim-dap",
+      "mfussenegger/nvim-dap",
   }
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use 'kdheepak/lazygit.nvim'
@@ -68,28 +59,28 @@ packer.startup(function(use)
   use 'mfussenegger/nvim-jdtls'
   --use { "zbirenbaum/copilot.lua" }
   use({
-    "jackMort/ChatGPT.nvim",
-    config = function()
-      require("chatgpt").setup({
+      "jackMort/ChatGPT.nvim",
+      config = function()
+        --require("chatgpt").setup({
         -- optional configuration
-      })
-    end,
-    requires = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
-    }
+        --})
+      end,
+      requires = {
+          "MunifTanjim/nui.nvim",
+          "nvim-lua/plenary.nvim",
+          "nvim-telescope/telescope.nvim"
+      }
   })
   use 'MunifTanjim/nui.nvim'
   use {
-    "SmiteshP/nvim-gps",
-    requires = "nvim-treesitter/nvim-treesitter"
+      "SmiteshP/nvim-gps",
+      requires = "nvim-treesitter/nvim-treesitter"
   }
   use {
-    'samodostal/image.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    },
+      'samodostal/image.nvim',
+      requires = {
+          'nvim-lua/plenary.nvim'
+      },
   }
 end)
 -- openai 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
@@ -165,4 +156,5 @@ end)
 -- "zbirenbaum/copilot.lua",
 -- cmd = "Copilot",
 -- event = "InsertEnter",
+--}
 --}
