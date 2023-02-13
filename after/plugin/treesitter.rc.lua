@@ -5,30 +5,30 @@ require 'nvim-treesitter.install'.compilers = { "zig", "gcc", "cc" }
 
 
 ts.setup {
-  highlight = {
-    enable = true,
-    disable = {},
-  },
-  indent = {
-    enable = true,
-    disable = {},
-  },
-  ensure_installed = {
-    "markdown",
-    "tsx",
-    "toml",
-    "fish",
-    --    "php",
-    "json",
-    "yaml",
-    "css",
-    "html",
-    "lua",
-    "vim",
-    "swift",
-    "dart"
-  },
-  autotag = {
-    enable = true,
-  }
+    highlight = {
+        enable = true,
+        disable = {},
+    },
+    indent = {
+        enable = true,
+        disable = {},
+    },
+    ensure_installed = {
+        "markdown",
+        "tsx",
+        "toml",
+        "fish",
+        --     "php",
+        "json",
+        "yaml",
+        "css",
+        "html",
+        "lua",
+        "vim",
+        "swift",
+        "dart"
+    },
+    autotag = {
+        enable = true,
+    }
 }
