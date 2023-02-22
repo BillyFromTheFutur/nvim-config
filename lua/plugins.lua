@@ -82,6 +82,23 @@ packer.startup(function(use)
           'nvim-lua/plenary.nvim'
       },
   }
+  use {
+      'wthollingsworth/pomodoro.nvim',
+      requires = 'MunifTanjim/nui.nvim'
+  }
+  use {
+      'rcarriga/nvim-notify'
+  }
+  use({
+      "giusgad/pets.nvim",
+      requires = {
+          "edluffy/hologram.nvim",
+          "MunifTanjim/nui.nvim",
+      }
+  })
+  use {
+      "guysherman/pg.nvim"
+  }
 end)
 -- openai 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
 -- use 'hrsh7th/cmp-buffer'
@@ -154,6 +171,10 @@ end)
 --},
 --  use {
 -- "zbirenbaum/copilot.lua",
+-- cmd = "Copilot",
+-- event = "InsertEnter",
+--}
+--}
 -- cmd = "Copilot",
 -- event = "InsertEnter",
 --}

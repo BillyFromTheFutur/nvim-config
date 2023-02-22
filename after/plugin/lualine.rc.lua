@@ -49,9 +49,9 @@ lualine.setup {
         lualine_c = { 'fileformat' },
         lualine_x = {
             --vim.cmd [[%!v:StatusLine()]]
-            'diff', 'diagnostics'
+            'diff', 'diagnostics',
         },
-        lualine_y = { 'filetype', 'progress' },
+        lualine_y = { 'filetype', 'progress', require('pomodoro').statusline },
         lualine_z = {
             { 'location', separator = { right = '' }, left_padding = 1, top_padding = 1 },
         },
