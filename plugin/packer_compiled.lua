@@ -95,10 +95,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["codeium.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\codeium.vim",
+    url = "https://github.com/Exafunction/codeium.vim"
+  },
   ["colorbuddy.nvim"] = {
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
+  },
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
   },
   ["flutter-tools.nvim"] = {
     loaded = true,
@@ -159,6 +169,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mini.move",
     url = "https://github.com/echasnovski/mini.move"
+  },
+  ["mini.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
+  },
+  neorg = {
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\nneorg\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neorg",
+    url = "https://github.com/nvim-neorg/neorg"
   },
   ["neoscroll.nvim"] = {
     loaded = true,
@@ -245,6 +266,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["pg.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\pg.nvim",
+    url = "https://github.com/guysherman/pg.nvim"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
@@ -255,11 +281,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\presence.nvim",
     url = "https://github.com/andweeb/presence.nvim"
   },
-  ["prettier.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\prettier.nvim",
-    url = "https://github.com/MunifTanjim/prettier.nvim"
-  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-file-browser.nvim",
@@ -269,6 +290,32 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  treesj = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vtreesj\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\treesj",
+    url = "https://github.com/Wansmer/treesj"
+  },
+  ["venn.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\venn.nvim",
+    url = "https://github.com/jbyuki/venn.nvim"
+  },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-dadbod",
+    url = "https://github.com/tpope/vim-dadbod"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-dadbod-ui",
+    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
+  },
+  ["vim-easy-align"] = {
+    loaded = true,
+    path = "C:\\Users\\ceift\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-easy-align",
+    url = "https://github.com/junegunn/vim-easy-align"
   },
   ["vim-flog"] = {
     loaded = true,
@@ -288,6 +335,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: neorg
+time([[Config for neorg]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\nneorg\frequire\0", "config", "neorg")
+time([[Config for neorg]], false)
+-- Config for: treesj
+time([[Config for treesj]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vtreesj\frequire\0", "config", "treesj")
+time([[Config for treesj]], false)
 -- Config for: ChatGPT.nvim
 time([[Config for ChatGPT.nvim]], true)
 try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "ChatGPT.nvim")

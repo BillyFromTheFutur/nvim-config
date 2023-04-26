@@ -9,7 +9,8 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   -- use { 'nvim-telescope/telescope-fzf-native.nvim',
   use { 'wbthomason/packer.nvim',
-    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+    run =
+    'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
@@ -83,29 +84,9 @@ packer.startup(function(use)
     },
   }
   use {
-    'wthollingsworth/pomodoro.nvim',
-    requires = 'MunifTanjim/nui.nvim'
-  }
-  use {
-    'rcarriga/nvim-notify'
-  }
-  use({
-    "giusgad/pets.nvim",
-    requires = {
-      "edluffy/hologram.nvim",
-      "MunifTanjim/nui.nvim",
-    }
-  })
-  use {
     "guysherman/pg.nvim"
   }
   use 'andweeb/presence.nvim'
-  use {
-    'VonHeikemen/fine-cmdline.nvim',
-    requires = {
-      { 'MunifTanjim/nui.nvim' }
-    }
-  }
   use {
     "nvim-neorg/neorg",
     run = ":Neorg sync-parsers", -- This is the important bit!
@@ -126,6 +107,8 @@ packer.startup(function(use)
   })
   use "jbyuki/venn.nvim"
   use 'Exafunction/codeium.vim'
+  use 'junegunn/vim-easy-align'
+  use 'j-hui/fidget.nvim'
 end)
 
 -- openai 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

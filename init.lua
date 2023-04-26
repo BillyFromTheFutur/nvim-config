@@ -3,7 +3,7 @@ require('highlights')
 require('maps')
 require('plugins')
 require("presence").setup()
-require("notify").setup()
+--require("notify").setup()
 require('neorg').setup {
   load = {
     ["core.defaults"] = {},
@@ -27,12 +27,9 @@ require('neorg').setup {
 --require("flutter-tools").setup {}
 --require("copilot").setup({})
 require("nvim-gps").setup()
-require('fine-cmdline').setup({
-  popup = {
-    position = { row = '5%', col = '50%' },
-    size = { width = '30%', heigth = 30 },
-  },
-})
+--require('fine-cmdline').setup({ popup = { position = { row = '5%', col = '50%' }, size = { width = '30%', heigth = 30 }, }, })
+require "fidget".setup {}
+
 local has = function(x)
   return vim.fn.has(x) == 1
 end
@@ -44,7 +41,7 @@ end
 if is_win then
   require('windows')
 end
-vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })
+--vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })
 vim.cmd [[
 set mouse =
 ]]
