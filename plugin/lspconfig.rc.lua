@@ -35,7 +35,6 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
-
 protocol.CompletionItemKind = {
   '', -- Text
   '', -- Method
@@ -103,6 +102,7 @@ nvim_lsp.prismals.setup {
   end,
   capabilities = capabilities
 }
+--[[
 nvim_lsp.java_language_server.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
@@ -110,7 +110,15 @@ nvim_lsp.java_language_server.setup {
   end,
   capabilities = capabilities
 }
-
+]]
+nvim_lsp.elixirls.setup {
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
+  cmd = { "C:\\Program Files (x86)\\Elixir\\bin\\elixir.bat" },
+}
 nvim_lsp.tsserver.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
@@ -177,11 +185,11 @@ nvim_lsp.astro.setup {
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
-  severity_sort = true,
-}
+    underline = true,
+    update_in_insert = false,
+    virtual_text = { spacing = 4, prefix = "●" },
+    severity_sort = true,
+  }
 )
 
 -- Diagnostic symbols in the sign column (gutter)

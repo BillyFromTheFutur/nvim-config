@@ -35,9 +35,11 @@ function StatusLine()
   end
 end
 
+vim.cmd [[colorscheme tokyonight]]
 lualine.setup {
   options = {
-    theme = bubbles_theme,
+    --theme = bubbles_theme,
+    theme = 'tokyonight',
     component_separators = '|',
     section_separators = { left = '', right = '' },
   },

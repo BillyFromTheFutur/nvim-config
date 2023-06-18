@@ -11,6 +11,7 @@ ts.setup {
     enable = true,
     disable = {},
   },
+  sync_install = true,
   indent = {
     enable = true,
     disable = {},
@@ -20,6 +21,7 @@ ts.setup {
     "tsx",
     "toml",
     "fish",
+    "elixir",
     --   "neorg",
     --     "php",
     "json",

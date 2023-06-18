@@ -2,33 +2,11 @@ require('base')
 require('highlights')
 require('maps')
 require('plugins')
-require("presence").setup()
---require("notify").setup()
-require('neorg').setup {
-  load = {
-    ["core.defaults"] = {},
-    ["core.norg.concealer"] = {},
-    ["core.norg.dirman"] = {
-      config = {
-        workspaces = {
-          work = "~/Documents/notes/work",
-          home = "~/Documents/notes/home",
-        }
-      }
-    }
-  }
-}
---require("pets").setup()
---require('neoscroll').setup()
---require("dapui").setup()
+--require("presence").setup()
+--require("nvim-gps").setup()
 --require('mini.animate').setup()
---require('chatgpt').setup()
---require("copilot").setup({})
---require("flutter-tools").setup {}
---require("copilot").setup({})
-require("nvim-gps").setup()
---require('fine-cmdline').setup({ popup = { position = { row = '5%', col = '50%' }, size = { width = '30%', heigth = 30 }, }, })
-require "fidget".setup {}
+--require "fidget".setup {}
+--require('mini.move').setup()
 
 local has = function(x)
   return vim.fn.has(x) == 1

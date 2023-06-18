@@ -1,9 +1,18 @@
+--local statusTokyo, nTokyo = pcall(require, "tokyonight")
+--if (not statusTokyo) then return end
+
+
+--nTokyo.setup({
+--comment_italics = true,
+--})
+
 local status, n = pcall(require, "neosolarized")
 if (not status) then return end
 
 n.setup({
   comment_italics = true,
 })
+
 
 local cb = require('colorbuddy.init')
 local Color = cb.Color
@@ -13,26 +22,28 @@ local groups = cb.groups
 local styles = cb.styles
 
 
-Color.new('black', '#000000')
-Color.new('purple', '#272660')
-Color.new('purpleDark', '#2D2B55')
 --Color.new('purpleDark', '#272660')
-Color.new('base0', '#FFEFD7')
-Color.new('base1', '#93a1a1')
-Color.new('base2', '#FBEBD9')
-Color.new('base3', '#4D21FC')
-Color.new('base00', '#657b83')
-Color.new('base01', '#586e75')
-Color.new('base02', '#1f1137')
-Color.new('base03', '#2D2B55')
-Color.new('yellow', '#b58900')
-Color.new('orange', '#875faf')
-Color.new('red', '#ddb403')
-Color.new('magenta', '#fff0db')
-Color.new('violet', '#6c71c4')
-Color.new('blue', '#b5651d')
-Color.new('cyan', '#B362FF')
-Color.new('green', '#d33682')
+
+Color.new('black', '#1A1B26')
+Color.new('purple', '#C792EA')
+Color.new('purpleDark', '#9D79D6')
+Color.new('base0', '#FFD580')
+Color.new('base1', '#89DDFF')
+Color.new('base2', '#A0AAB9')
+Color.new('base3', '#82AAFF')
+Color.new('base00', '#57737A')
+Color.new('base01', '#4B5363')
+Color.new('base02', '#1A1B26')
+Color.new('base03', '#1A1B26')
+Color.new('yellow', '#EBCB8B')
+Color.new('orange', '#F78C6C')
+Color.new('red', '#FF5458')
+Color.new('magenta', '#FF5370')
+Color.new('violet', '#A9A1E1')
+Color.new('blue', '#82AAFF')
+Color.new('cyan', '#89DDFF')
+Color.new('green', '#C3E88D')
+
 
 Group.new('CursorLine', colors.none, colors.purpleDark, styles.NONE, colors.purple)
 Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)

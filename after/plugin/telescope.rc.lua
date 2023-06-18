@@ -16,7 +16,8 @@ telescope.setup {
   defaults = {
     mappings = {
       n = {
-        ["q"] = actions.close
+        ["q"] = actions.close,
+        ["l"] = actions.select_default, -- Add this line to map "s" to select_default action
       },
     },
   },
@@ -37,7 +38,6 @@ telescope.setup {
           ["h"] = fb_actions.goto_parent_dir,
           ["sd"] = fb_actions.sort_by_date,
           ["m"] = fb_actions.move,
-          ["l"] = fb_actions.open,
           --         ["l"] = fb_actions.select_default,
           ["a"] = fb_actions.toggle_hidden,
           --         ["l"] = fb_actions.goto_,

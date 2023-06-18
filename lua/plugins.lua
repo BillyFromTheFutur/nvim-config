@@ -60,6 +60,13 @@ packer.startup(function(use)
   use 'mfussenegger/nvim-jdtls'
   --use { "zbirenbaum/copilot.lua" }
   use({
+    'MunifTanjim/nui.nvim',
+    config = function()
+      require('nui').setup({
+      })
+    end
+  })
+  use({
     "jackMort/ChatGPT.nvim",
     config = function()
       --require("chatgpt").setup({
@@ -87,15 +94,15 @@ packer.startup(function(use)
     "guysherman/pg.nvim"
   }
   use 'andweeb/presence.nvim'
-  use {
-    "nvim-neorg/neorg",
-    run = ":Neorg sync-parsers", -- This is the important bit!
-    config = function()
-      require("neorg").setup {
-        -- configuration here
-      }
-    end,
-  }
+  --use {
+  --  "nvim-neorg/neorg",
+  --  run = ":Neorg sync-parsers", -- This is the important bit!
+  -- config = function()
+  --  require("neorg").setup {
+  -- configuration here
+  --  }
+  --end,
+  --}
   use 'kristijanhusak/vim-dadbod-ui'
   use 'tpope/vim-dadbod'
   use({
@@ -108,7 +115,10 @@ packer.startup(function(use)
   use "jbyuki/venn.nvim"
   use 'Exafunction/codeium.vim'
   use 'junegunn/vim-easy-align'
-  use 'j-hui/fidget.nvim'
+  --use 'j-hui/fidget.nvim'
+  use 'tpope/vim-surround'
+  use 'mg979/vim-visual-multi'
+  use 'folke/tokyonight.nvim'
 end)
 
 -- openai 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
