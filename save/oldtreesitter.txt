@@ -1,0 +1,18 @@
+
+return {
+  "nvim-treesitter/nvim-treesitter",
+  version = "*",
+  lazy = false,
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  config = function()
+    require("nvim-treesitter").setup {
+      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+      highlight = {
+	enable = true,
+    	}
+    }
+  end,
+}
+ 
