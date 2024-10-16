@@ -15,9 +15,9 @@ return {
 				additional_vim_regex_highlighting = false,
 			},
 			indent = { enable = true },
-			autotag = {
-				enable = true,
-			},
+			-- autotag = {
+			-- 	enable = true,
+			-- },
 			ensure_installed = {
 				"astro",
 				"cmake",
@@ -36,6 +36,7 @@ return {
 				"svelte",
 				"typescript",
 				"json",
+				"tsx"
 			},
 
 			-- matchup = {
@@ -48,7 +49,7 @@ return {
 				use_virtual_text = true,
 				lint_events = { "BufWrite", "CursorHold" },
 			},
-
+			sync_install = true, 
 			playground = {
 				enable = true,
 				disable = {},
